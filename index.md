@@ -15,30 +15,27 @@ Add, edit, or remove any content below for the workshop in question. -->
 <img src="assets/img/titleSlide.png" alt="Workshop Title Slide" width="100%">
 
 <!-- Main header -->
-# Getting started with ___.
+# Introduction to R
 
-This is a short description about the topic of the workshop. Replace this text with your own.
+R has a powerful suite of high-level statistical functions, but sometimes you need lower-level control over the functionality of your script. No prior knowledge of R is required.
 
-In this tutorial, you will learn about ______.
+Presentation by Isaac Kinley, DASH Support Assistant and PhD Candidate in Psychology, Neuroscience, and Behaviour. [Book an appointment with Isaac or another member of the DASH Team.](https://library.mcmaster.ca/services/dash)
 
 ## Prerequisites
 
-<!-- If creating or installing is covered in the module (preparation), mention that in brackets. -->
-- A [GitHub.com](https://www.github.com) account.
-- Installation of [Python](https://www.python.org/downloads/). (This will be covered in the [Preparation](preparation) page)
-- Some familiary with **softwareName/topic here**
+- A local installation of R and RStudio (this will be covered in the Preparation page)
 
 <!-- What will the student learn to do, learn to use, etc. -->
 ## Learning Objectives
 By the end of this workshop, you will be able to:
-- Learning objective 1
-- Learning objective 2
-- Learning objective 3
-- Learning objective 4
-- You can add more here.
+- Understand what R is and what it can be used for
+- Work with R's atomic data structures
+- Use collections to store data
+- Control the flow of a program using conditional statements and loops
+- Create and use functions
 
 <!-- Estimate the time the workshop will take to complete. Feel free to remove this. -->
-## Duration (optional)
+## Duration
 This module will take around 1 to 2 hours, however feel free to work at your own pace!
 
 ## Land Acknowledgement
