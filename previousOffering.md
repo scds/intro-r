@@ -12,9 +12,12 @@ parent: Home
 # Previous Offerings
 Workshop live recordings are provided here. They are an alternative to the workshop content provided on the website.
 
-## October 2022
-<iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/60aeca91-1d04-493f-a94e-ee733efa3520/public"></iframe>
-[View original here.](https://echo360.ca/media/60aeca91-1d04-493f-a94e-ee733efa3520/public)
+<details markdown="1">
+<summary>December 2022</summary>
+<iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/ac3c8750-dd6f-46df-9db7-0a158476f41a/public"></iframe>
+[View original here.](https://echo360.ca/media/ac3c8750-dd6f-46df-9db7-0a158476f41a/public)
 
-<embed src="assets/docs/examplePDF.pdf" style="border:none;" width="100%" height="466px">
-[Download as PDF.](assets/docs/examplePDF.pdf)
+Access the workshop files here:
+- [gen-data.R](data/gen-data.R)
+- [workshop-file.R](data/workshop-file.R)
+</details>
