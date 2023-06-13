@@ -15,32 +15,57 @@ Seperate preparation into account creation, file downloads, and software downloa
 However, you can format this as you wish.
 An example is provided below.
 -->
-## 1. Create an account
-- Navigate to [website](https://www.google.com) and sign up for an account if you don't already have one.
-- After registering, sign in to your account.
+## 1. Install R
 
-## 2. Get the data
-You will have an opportunity to download the data during the workshop; however, if you would like to do so ahead of time, it can be downloaded [here](https://www.google.com).
+<details markdown="1">
+<summary>Windows</summary>
 
-## 3. Get the software
-This hands-on workshop uses [Software Name](https://www.google.com). Please download *Software Name* in advance of the workshop to be able to participate in it to the fullest extent.
+- Navigate to <https://cran.rstudio.com/>.
+- Click on `Download R for Windows`
 
-{: .warning }
-> This is a warning message. You can use to to mention things like:
->
-> - Must be a McMaster Student/Staff to access content/software licenses
-> - Windows/MacOS/Linux is not supported
+<img width="100%" src="assets/img/preparation/windows1.png" style="border: 2px solid black">
 
-### Windows/Mac Installation
-<!-- Usually, linking to an installation guide on the official website of the software is enough, no need to explain how to install. -->
-<!-- If there are additional steps not covered in the installation guide, include them -->
-- Steps for installation.
+- Click on `base`
 
-    ![An image to show the step above](assets/img/temporaryInstallationGuide.png)
+<img width="100%" src="assets/img/preparation/windows2.png" style="border: 2px solid black">
 
-- More guidance can be found [here](https://www.google.com).
+- Click on `Download R... for Windows`
 
-### Linux Installation
-- Steps for installation.
-- More steps for installation.
-- More guidance can be found [here](https://www.google.com).
+<img width="100%" src="assets/img/preparation/windows3.png" style="border: 2px solid black">
+
+- Run the executable and install.
+
+</details>
+
+<details markdown="1">
+<summary>macOS</summary>
+
+- Navigate to <https://cran.rstudio.com/>.
+- Click on `Download R for macOS`
+
+<img width="100%" src="assets/img/preparation/mac1.png" style="border: 2px solid black">
+
+- Choose the correct install for your Mac.
+
+<img width="100%" src="assets/img/preparation/mac2.png" style="border: 2px solid black">
+
+</details>
+
+<details markdown="1">
+<summary>Linux</summary>
+
+- Navigate to <https://cran.rstudio.com/>.
+- Click on `Download R for Linux`
+
+<img width="100%" src="assets/img/preparation/linux1.png" style="border: 2px solid black">
+
+- Choose your Linux distribution and follow the instructions provided.
+
+<img width="100%" src="assets/img/preparation/linux2.png" style="border: 2px solid black">
+
+</details>
+
+## 2. Install RStudio
+
+- Navigate to <https://posit.co/download/rstudio-desktop/>/
+- Download and install RStudio for your operating system.
