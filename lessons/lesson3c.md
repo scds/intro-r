@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lesson 3c - Strings
-nav_order: 2
+nav_order: 3
 parent: Lesson 3 - Atomic Data Types
 grand_parent: Lessons
 ---
