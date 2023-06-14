@@ -21,6 +21,8 @@ Add, edit, or remove any content below for the workshop in question.
 <!-- Below the video/slides, this is where you put the text version of the page. -->
 ## What is R?
 
+<img src="assets/img/introduction/R_logo.png" width="40%">
+
 R defines itself as "a language and environment for statistical computing and graphics." R is an extremely important tool for data scientists.
 
 ### History of R
