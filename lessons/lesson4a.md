@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Lesson 3b - Booleans
-nav_order: 2
-parent: Lesson 3 - Atomic Data Types
-grand_parent: Lessons
+title: Lesson 4a - Vectors
+nav_order: 1
+
+# Notice the two lines below. Since this is a sub-lesson of a lesson (Lesson 3a), it's parent is lesson 3 and it's grandparent is Lessons. Make sure to include this if you decide to have sub-lessons.
+parent: Lesson 4 - Collections
+grand_parent: Lessons 
 ---
 
 {: .no_toc}  
-# Lesson 3b - Booleans
+# Lesson 4a - Vectors
 
 A small description about the lesson.
 

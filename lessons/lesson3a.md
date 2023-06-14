@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Lesson 3a - Sub-lesson Name
+title: Lesson 3a - Numbers
 nav_order: 1
 
 # Notice the two lines below. Since this is a sub-lesson of a lesson (Lesson 3a), it's parent is lesson 3 and it's grandparent is Lessons. Make sure to include this if you decide to have sub-lessons.
-parent: Lesson 3 - Lesson Name
+parent: Lesson 3 - Atomic Data Types
 grand_parent: Lessons 
 ---
 
 {: .no_toc}  
-# Lesson 3a - Lesson Name 
+# Lesson 3a - Numbers
 
 A small description about the lesson.
 

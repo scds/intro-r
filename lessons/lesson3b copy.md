@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Lesson 3b - Booleans
+title: Lesson 4b - Lists
 nav_order: 2
-parent: Lesson 3 - Atomic Data Types
+parent: Lesson 4 - Collections
 grand_parent: Lessons
 ---
 
 {: .no_toc}  
-# Lesson 3b - Booleans
+# Lesson 4b - Lists
 
 A small description about the lesson.
 

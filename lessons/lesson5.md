@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Lesson 2 - Variables
-nav_order: 2
+title: Lesson 5 - Control Structures
+nav_order: 5
 parent: Lessons
 ---
 
 {: .no_toc}  
-# Lesson 2 - Variables
+# Lesson 5 - Control Structures
 
 How do we store data that we can use and modify? Using variables!
 
