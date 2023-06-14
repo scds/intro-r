@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lesson 1 - Lesson Name
+title: Lesson 1 - Using R as a Calculator
 nav_order: 1
 parent: Lessons
 ---
@@ -11,9 +11,9 @@ Add, edit, or remove any content below for the workshop in question. -->
 <!-- Putting a {: .no_toc} above a header removes it from the table of contents -->
 
 {: .no_toc}  
-# Lesson 1 - Lesson Name 
+# Lesson 1 - Using R as a Calculator 
 
-A small description about the lesson.
+What better way to start learning R than to use it as a calculator?
 
 <!-- This is your table of contents. You don't need to touch it, it automatically creates it when you add or remove headers. If you do not want a header to be included, put {: .no_toc } above the header line, as you can see above with Lesson 1 - Lesson Name. Make sure that there's also an empty line above {: .no_toc }... Markdown is picky about this :( -->
 <details markdown="block">
@@ -27,38 +27,95 @@ A small description about the lesson.
 
 <!-- Here are your learning objectives. Just like in the introduction, but more specific for this lesson. -->
 ## Lesson Objectives
-- A learning objective.
-- Second learning objective.
-- Another learning objective.
+- Learn about the mathematical operations R supports.
 
-<!-- A video for your lesson (if applicable) -->
+<!-- A video for your lesson (if applicable)
 ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
 
-<!-- Place iframe of video here -->
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
-[View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false)
+[View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
 <!-- Text content format for your lessons if you don't want to rely on videos, or want to provide another format of learning consumption. -->
-## Sub-Topic
+## Math Operations
 
-Include a text version of your topic here.
+Math expressions in R work similarly to how math expressions work with other programs and languages.
 
-## Another sub-topic
+<div class="code-example" Markdown="1">
+{: .label }
+Input
+```python
+3 + 3
+```
 
-Include text here.
+{: .label .label-green }
+Output
+```
+6
+```
+</div>
 
-## Another sub-topic
+R supports addition (+), subtraction (-), multiplication (*), division (/), exponents (^), modulus (%%), and integer division (%/%). 
 
-Include text here.
+When there are multiple operations in an expression, R follows the typical order of operations listed below.
 
-<!-- Summarize your learning objectives here. It acts as a reminder to the learner about what they just learned, as well as a checklist for you to make sure you covered everything you wished to cover. -->
+| Operation                                         | Symbol      |
+|---------------------------------------------------|-------------|
+| Parentheses                                       | ( )         |
+| Exponents                                         | ^           |
+| Modulus and Floor Division                        | %%, %/%     |
+| Multiplication, Division                          | *, /        |
+| Addition and Subtraction                          | +, -        |
+
+<div class="code-example" Markdown="1">
+{: .label }
+Input
+```python
+24 %% (4 * (1 + 5))
+```
+
+{: .label .label-green }
+Output
+```
+0
+```
+</div>
+
+R also supports decimal numbers as well as complex numbers. Complex numbers are briefly mentioned in [Lesson 3a.](lesosn3a)
+
+<div class="code-example" Markdown="1">
+{: .label }
+Input
+```r
+12.3 ** 1.5
+```
+
+{: .label .label-green }
+Output
+```
+43.13777
+```
+</div>
+
+## Other Math Functions
+R comes with some built-in math functions, requiring no extra setup. Getting the absolute value of a number, finding the square root, rounding numbers, and more.
+
+<div class="code-example" Markdown="1">
+
+{: .label }
+Input
+```r
+sqrt(16)
+```
+
+{: .label .label-green }
+Output
+```
+4
+```
+</div>
+
+A full list of built-in math functions can be found here: <https://www.javatpoint.com/r-built-in-functions>.
+
 ## Key Points / Summary
-
-- Remind the student about what they just learned.
-- You can also note down any key information to keep in mind.
-
-<!-- You can add your additional resources for a specific lesson here, however there is also an additional resources page alongside the conclusion at the end of the workshop website. -->
-## Additional Resources (optional)
-
-- Here, you can list some additional resources the student can access to learn more about this lesson.
+- You can use R as a calculator.
