@@ -23,9 +23,8 @@ Collections refer to any data type that groups values up together. In R, vectors
 </details>
 
 ## Lesson Objectives
-- A learning objective.
-- Second learning objective.
-- Another learning objective.
+- Use vectors to group values of the same data type
+- Access values in vectors
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
@@ -113,6 +112,9 @@ first second  third fourth
 
 There are several ways to access the individual contents of a vector.
 
+{: .note }
+Just like with strings, in R, indexing starts at 1.
+
 ```r
 myVector <- c(a = "apple", b = "banana", c = "cow", d = "donkey", e = "elephant")
 
@@ -131,22 +133,28 @@ myVector[c('a', 'b')]   # This returns the values with the name 'a' and 'b'
 {: .note }
 Try these in RStudio and experiment, the best way to learn R is to code!
 
+## Modifying a Value in a Vector
+To modify the value at a specific, index the value as usual and assign a value to it just like you would a regular variable.
 
+<div class="code-example" markdown="1">
 
+{: .label }
+Input
+```r
+myVector <- c(3, 4, 5)
+myVector[3] <- 6
+myVector
+```
 
-## Another sub-topic
-
-Include text here.
-
-## Another sub-topic
-
-Include text here.
+{: .label .label-green }
+Output
+```
+[1] 3 4 6
+```
+</div>
 
 ## Key Points / Summary
-
-- Remind the student about what they just learned.
-- You can also note down any key information to keep in mind.
-
-## Additional Resources (optional)
-
-- Here, you can list some additional resources the student can access to learn more about this lesson.
+- You can use vectors to make a collection of values.
+- Values in a vector must be of the same data type.
+- You can access and modify values in a vector using indexing.
+- Indexes in R start at 1.
