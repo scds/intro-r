@@ -21,7 +21,7 @@ Control structures allow us to conditionally execute code and create loops.
 
 ## Lesson Objectives
 - Conditionally execute code using `if` statements.
-- Loop code using `while` loops and `for` loops.
+- Loop code using `repeat`, `while`, and `for` loops.
 - Learn about the `break`, and `next` keywords.
 
 <!-- ## Lesson Video
@@ -223,3 +223,29 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > > You got 1 head.
 >   </div>
 > </details>
+
+## Loops
+
+In R , there's often a need to repeat pieces of code multiple times, whether they're exactly the same or with a slight variance.There are three different control structures to deal with looping, `repeat` loops, `while` loops and `for` loops.
+
+### `repeat` Loops
+
+`repeat` loops are the simplest to set up, but also the simplest to mess up. Code that appears within a `repeat` block will keep repeating until it comes across a `break` keyword.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```python
+for x in [1,2,3]:
+  print(x)
+```
+
+{: .label .label-green }
+Output
+```
+1
+2
+3
+```
+</div>
