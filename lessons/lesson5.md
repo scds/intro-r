@@ -8,7 +8,7 @@ parent: Lessons
 {: .no_toc}  
 # Lesson 5 - Control Structures
 
-How do we store data that we can use and modify? Using variables!
+Control structures allow us to conditionally execute code and create loops.
 
 <details markdown="block">
   <summary>
@@ -20,7 +20,9 @@ How do we store data that we can use and modify? Using variables!
 </details>
 
 ## Lesson Objectives
-- Use variables to store and modify data.
+- Conditionally execute code using `if` statements.
+- Loop code using `while` loops and `for` loops.
+- Learn about the `break`, and `next` keywords.
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
@@ -28,161 +30,196 @@ The following video demonstrates each of the steps outlined below in text.
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
-## Identifiers
+## Conditional Statements
 
-Identifiers are variable names. When you create, use, or modify a variable, you refer to the variable by its identifier.
+### `if` Statements
 
-R has some rules and restrictions for identifiers.
-- Identifiers can consist of letters (uppercase and lowercase), digits, periods (.), and underscores (_).
-- All identifiers must start with a letter or with a period (.).
-  - If the identifier starts with a period, it cannot be followed by a digit.
-- There are some identifiers reserved for R's use only; they're usually common words like "if", "else", "repeat", etc.
-  - You can find a full list here: <https://www.geeksforgeeks.org/r-keywords/>
-- Identifiers are case-sensitive.
-  - `myVariable` and `MYVARIABLE` are considered two different variables.
+With conditional statements, we can test a logical expression to decide whether or not to execute lines of code. In R, this is done using an `if` statement.
+
+```r
+if (logical) {
+  # code
+}
+```
+
+Take a look at the code block above. This is the general structure of an `if` statement. If the `logical` is evaluation to be `TRUE`, the code inside the curly brackets { } will execute. Otherwise, if the `logical` is evaluated to be `FALSE`, R will skip over all the code inside the curly brackets  { }.
 
 {: .new-title }
 > Exercise                                             <!-- This is where you edit the title -->
 > 
-> Which of the following are valid variable names?
->
-> - myVariable
-> - _digits
-> - 10_hp
-> - repeat
-> - .1name
->
-> <details>
->   <summary> See Answer </summary>
->   <div markdown="1">
->   {: .note-title }                                   
-> > Answer
-> > 
-> > - myVariable is a valid variable name.
-> > - _digits is **not** a valid variable because it begins with an underscore.
-> > - 10_hp is **not** a valid variable name because it begins with a digit.
-> > - repeat is **not** a valid variable name because it's one of R's reserved keywords.
-> > - .1name is **not** a valid variable name because the period is followed by a digit.
->   </div>
-> </details>
-
-## Assigning Values to Variables
-
-The format to create a variable is:
-
-```r
-identifier <- value
-```
-
-Suppose we wanted to assign `myVariable` the value of 10. We would do
-
-```r
-myVariable <- 10
-```
-
-The line above is read as "`myVariable` is assigned the value of 10."
-
-If we decide later on that we want to reassign the value of `myVariable` to something else, we would again do
-
-```r  
-myVariable <- <new value>
-```
-
-and that would set the value of `myVariable` to our new value.
-
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
-> 
-> What is the value of **a** after this code is executed?
+> What is the output of the code block below?
 >
 > ```r
-> a <- 2
-> b <- 20
-> a <- b
-> b <- 3
+> myNumber <- 7
+> if (myNumber < 6) {
+>   cat(myNumber, "is smaller than 6")
+> }
+>
+> if (myNumber > 6) {
+>   cat(myNumber, "is larger than 6")
+> }
 > ```
-> 
+>
 > <details>
 >   <summary> See Answer </summary>
 >   <div markdown="1">
 >   {: .note-title }                                   
 > > Answer
 > > 
-> > The value of **a** is 20.
-> > 
-> > - Going step-by-step, **a** is assigned the value of 2.     (a = 2)  
-> > - Then, **b** is assigned the value of 20.                  (a = 2, b = 20)  
-> > - **a** is assigned the value of **b**, which is 20.            (a = 20, b = 10)  
-> > - Finally, **b** is assigned the value of 3.                (a = 20, b = 3)
+> > 7 is larger than 6
 >   </div>
 > </details>
 
-## Using Variables in Math
+### `else` Blocks
 
-If we want to use a variable in our math expression, we just reference the variable using its identifier.
-
-```r
-5 * myVariable
-```
-
-and it outputs the answer.
-
-## Finding All Defined Variables
-
-Aside from using the `Environment` tab in RStudio, we can also use the `ls()` function to get a list of all our defined variables.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-a <- 5
-b <- 2
-myVariable <- 2.5
-.myVariable <- 2.6
-
-ls()
-```
-
-{: .label .label-green }
-Output
-```
-[1] "a"          "b"          "myVariable"
-```
-</div>
-
-You'll notice that any variables with an identifier that starts with a period (.) are not shown. If you want to show them as part of the output, you have to define `all.name = TRUE` inside the `ls()` function.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-a <- 5
-b <- 2
-myVariable <- 2.5
-.myVariable <- 2.6
-
-ls(all.name <- TRUE)
-```
-
-{: .label .label-green }
-Output
-```
-[1] ".myVariable"          "a"          "b"          "myVariable"
-```
-</div>
-
-## Deleting a Variable
-
-If you wanted to delete a variable, you can use the `rm()` function.
+Occasionally, you'll need to have two seperate pieces of code. One if the condition succeeds, and one if the condition fails. You can use the `else` keyword to do just that!
 
 ```r
-myVariable <- 5
-rm(myVariable)
+if (logical) {
+  # code1
+} else {
+  # code2
+}
 ```
 
-## Key Points / Summary
+In the example above, the code inside the first pair of braces { } runs if the logical evaluates to be `TRUE`. Otherwise, if the logical evaluates to be `FALSE`, the code inside the second pair of braces { } will be executed.
 
-- You can use variables to store data.
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> p <- 0.05
+> if (p < 0.05) {
+>   cat("Statistically significant.")
+> } else { 
+>   cat("Not statistically significant.")
+> }
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> > 
+> > Not statistically significant.
+> >
+> > Keep in mind that 0.05 is **not** less than 0.05.
+>   </div>
+> </details>
 
+### `elif` Blocks
+
+Sometimes, `if` and `else` is not enough. You might need to test multiple ranges of numbers. This is where the `elif` keyword comes in.
+
+```r
+if logical1:
+  # code1
+elif logical2:
+  # code2
+else:
+  # code3
+```
+
+In the example above, code in `# code1` is executed if `logical` evalutes to be `TRUE`. If and only if `logical` evaluates to be `FALSE`, it will test `logical2`. If `logical2` is `TRUE`, the code in `# code2` is executed. Otherwise, the code inside `# code3` is executed.
+
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> mark = 67
+> if (mark > 80) {
+>   cat("You got an A!")
+> } elif (mark > 70) {
+>   cat("You got a B!")
+> } elif (mark > 60) {
+>   cat("You got a C!")
+> } elif (mark > 50) {
+>   cat("You got a D!")
+> } else {
+>   cat("Better luck next time!")
+> }
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> > 
+> > You got a C!
+>   </div>
+> </details>
+
+### Extra Exercises
+
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> mark = 74
+> if (mark > 80) {
+>   cat("You got an A!")
+> } 
+> if (mark > 70) {
+>   cat("You got a B!")
+> }
+> if (mark > 60) {
+>   cat("You got a C!")
+> }
+> if (mark > 50) {
+>   cat("You got a D!")
+> } else {
+>   cat("Better luck next time!")
+> }
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> >
+> > You got a B!  
+> > You got a C! 
+> > You got a D!
+>   </div>
+> </details>
+
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> heads = c(TRUE, FALSE)
+> if (heads[1]) {
+>   if (heads[2]) {
+>     print("You got 2 heads!")
+>   } else {
+>     print("You got 1 head.")
+>   }
+> } else {
+>   if (heads[2]) {
+>     print("You got 1 head.")
+>   } else {
+>     print("You got 0 heads.")
+>   }
+> }
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> >
+> > You got 1 head.
+>   </div>
+> </details>
