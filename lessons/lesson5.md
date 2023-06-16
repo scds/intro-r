@@ -236,16 +236,94 @@ In R , there's often a need to repeat pieces of code multiple times, whether the
 
 {: .label }
 Input
-```python
-for x in [1,2,3]:
-  print(x)
+```r
+data <- c(1)
+
+repeat {
+  print(data)
+
+  data <- c(data, length(data) + 1)
+
+  if(length(data) == 5) {
+    break
+  }
+}
 ```
 
 {: .label .label-green }
 Output
 ```
-1
-2
-3
+[1] 1
+[1] 1 2
+[1] 1 2 3
+[1] 1 2 3 4
 ```
 </div>
+
+`repeat` loops are not often used because `while` loops and `for` loops simplify the break condition.
+
+{: .warning }
+If you ever find yourself using `repeat` loops, don't forget the break! You may end up in an infinite loop, requiring you to force stop the code.
+
+### `while` Loops
+
+The `while` loop is the next step up from the `repeat` loop. It includes the condition within the loop format, and for as long as the condition remains TRUE, the `while` loop will continue.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+data <- c(1)
+
+while(length(data) < 5) {
+  print(data)
+
+  data <- c(data, length(data) + 1)
+}
+```
+
+{: .label .label-green }
+Output
+```
+[1] 1
+[1] 1 2
+[1] 1 2 3
+[1] 1 2 3 4
+```
+</div>
+
+Rather than specifying when to stop the loop, you specify a condition that must be met for the loop to continue. The condition is always checked prior to the code execution, whereas you can put the condition wherever you want inside a `repeat` loop. However, you can still use the `break` inside a `while` loop.
+
+### `for` Loops
+
+`for` loops are great to iterate over items in a collection. 
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+data <- c(1, 7, 3, 5, 8, 2, 3)
+sum <- 0
+
+for(value in data) {
+  sum <- sum + value
+}
+
+print(sum)
+```
+
+{: .label .label-green }
+Output
+```
+[1] 29
+```
+</div>
+
+In the `for` loop above, we iterate over every item in the vector of data we created. We then add that value to the `sum` variable. Once we go through all the values, we print the `sum`.
+
+## Key Points / Summary
+- key point 1
+- 2
+- 3
