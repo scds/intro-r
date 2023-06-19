@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Lesson 4b - Matrix
+title: Lesson 4c - Lists
 nav_order: 2
 parent: Lesson 4 - Collections
 grand_parent: Lessons
 ---
 
 {: .no_toc}  
-# Lesson 4b - Matrix
+# Lesson 4c - Lists
 
-Matrices are vectors in 2 dimensions.
+Lists are collections that can hold values of different data types.
 
 <details markdown="block">
   <summary>

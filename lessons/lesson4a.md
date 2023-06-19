@@ -11,7 +11,7 @@ grand_parent: Lessons
 {: .no_toc}  
 # Lesson 4a - Vectors
 
-Collections refer to any data type that groups values up together. In R, vectors and lists are two types of collections.
+Collections are items that contain other items. In R, vectors, matrices, lists, and data frames are four types of collections. In this lesson, we'll cover vectors.
 
 <details markdown="block">
   <summary>
@@ -32,6 +32,10 @@ The following video demonstrates each of the steps outlined below in text.
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
+## What's a Vector?
+
+Vectors are one of the four types of collections we will cover. They contain elements of the same type, so you can have a vector of logicals, a vector of strings, and so on.
+
 ## Creating a Vector
 
 The format to create a vector is the following:
@@ -40,7 +44,7 @@ The format to create a vector is the following:
 myVector <- c(item1, item2, item3, ...)
 ```
 
-All items in a vector must be of the same type.
+Don't forget that all items in a vector must be of the same type.
 
 <div class="code-example" markdown="1">
 
@@ -63,6 +67,48 @@ Output
 </div>
 
 In the example above, you'll notice that in `myVector2`, all the numeric data values are turned into strings. Rather than throwing an error, R will do what it think is most appropriate and turn all the values into one data type.
+
+### Creating a Vector of Consecutive Numbers
+
+You can use the `:` operator to create a vector of consecutive numbers.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+x <- 1:10
+x
+```
+
+{: .label .label-green }
+Output
+```
+[1] 1 2 3 4 5 6 7 8 9 10
+```
+</div>  
+
+## Adding an Element to a Vector
+
+The `c()` function can also add elements to an existing vector.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myVector <- c(1, 2.0, 6, -4)
+
+myVector <- c(myVector, -6)
+myVector
+```
+
+{: .label .label-green }
+Output
+```
+[1]  1  2  6 -4  -6
+```
+</div>
 
 ## Concatenating Vectors
 
@@ -128,6 +174,9 @@ myVector[c(-2, -4)]     # This returns all items excluding the speicifc values #
 # The following lines access vectors with items that are named
 myVector['a']           # This returns the value with the name 'a'
 myVector[c('a', 'b')]   # This returns the values with the name 'a' and 'b'
+
+# You can also index all elements that fulfil a condition
+myVector[ grepl("le", myVector, fixed=TRUE) ] # This returns `a` and `e`, because they both contain "le".
 ```
 
 {: .note }

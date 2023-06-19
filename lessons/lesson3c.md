@@ -107,6 +107,18 @@ Johnny said that "He's happy".
 ```
 </div>
 
+{: .warning}
+> `cat()` does not create a newline at the end of the string, so sometimes it creates some funky output like the following:
+>
+> <img alt="" width="60%" src="../assets/img/lessons/cat1.png">
+>
+> To avoid this, add `\n` at the end.
+> 
+> <img alt="" width="60%" src="../assets/img/lessons/cat2.png">
+>
+> Don't worry about the line with `for`. All it does is loop the code, we'll talk about it in [lesson 5.](lesson5)
+
+
 By default, variables are seperated by a space when using `cat()`. You can remove this space if you add `sep=""` within the brackets.
 
 <div class="code-example" markdown="1">
@@ -219,8 +231,33 @@ Output
 ```
 </div>
 
+### Testing If a String Contains Another String
+
+To test if a string contains another string, use `grepl(needle, haystack, fixed=TRUE)`. Change the needle and haystack to be the string you're searching for inside which string. If you are familiar with Regular Expression (RegEx) searching, you can get rid of `fixed=TRUE` to do a RegEx search.
+
+{: .note }
+`grepl(needle, haystack, fixed=TRUE)` is case-sensitive. 
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+grepl("intro", "introduction to r", fixed=TRUE)
+grepl("intro", "Introduction to R", fixed=TRUE)
+grepl("intro", "machine learning with r: linear regression", fixed=TRUE)
+```
+
+{: .label .label-green }
+Output
+```
+TRUE
+FALSE
+FALSE
+```
+</div>
 
 ## Key Points / Summary
 - Strings represent words and characters.
 - The first character in a string is at index 1.
-- You can concatenate variables together using `cut()` and `paste()`
+- You can concatenate variables together using `cat()` and `paste()`

@@ -175,7 +175,7 @@ Output
 
 ## Deleting a Variable
 
-If you wanted to delete a variable, you can use the `rm()` function.
+If you wanted to delete a variable, you can use the `rm()` function. Usually, deleting a variable is done to prevent accidental usage of it, but it's not required or done often.
 
 ```r
 myVariable <- 5
