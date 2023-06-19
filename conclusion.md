@@ -15,17 +15,25 @@ Add, edit, or remove any content below for the workshop in question.
 
 <!-- Recap your learning objectives from the introductory. -->
 You should now be able to:
-- To do this
-- And this other thing
-- Double check that the learning objectives in the introduction match up!
+- Describe what R is
+- Create, use, and modify variables in R
+- Display data to the console
+- Use the different atomic data types and collections R has to offer
+- Create conditional and looping code
+- Create and use functions
 
 <!-- This is where you can add additional resources for your readers. -->
 # Additional Resources
 To learn more about any particular topic, take a look at the links below.
 
-## Topic
-- Some link
-- Other 
+## CRAN Packages
+This is a full list of all the packages available for R through the Package Installer in RStudio.
+- <https://cran.r-project.org/web/packages/available_packages_by_name.html>
 
-## Topic 2
-- Other resource
+## Kaggle
+Kaggle is an online platform that helps data scientists get access to public datasets.
+- <https://www.kaggle.com/>
+
+## Stack Overflow
+Stack Overflow is **the** number one place to look for and ask programming-related questions. If you Google a Python error, chances are that Stack Overflow appears in the results. 
+- <https://stackoverflow.com/>
