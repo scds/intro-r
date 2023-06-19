@@ -9,7 +9,7 @@ grand_parent: Lessons
 {: .no_toc}  
 # Lesson 4c - Lists
 
-Lists are collections that can hold values of different data types.
+Lists are another type of container that R has to offer.
 
 <details markdown="block">
   <summary>
@@ -21,15 +21,17 @@ Lists are collections that can hold values of different data types.
 </details>
 
 ## Lesson Objectives
-- A learning objective.
-- Second learning objective.
-- Another learning objective.
+- Use lists to create containers with elements of multiple data types
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
 
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
+
+## What is a List?
+
+A list is a container that can contain elements of different data types, unlike vectors.
 
 ## Creating a List
 
@@ -58,7 +60,7 @@ Input
 ```r
 myList <- list(2, 2, 3, "a string", TRUE)
 
-# if we were to access the first index like normal, we would get a list with 1 element
+# if we were to access the first index like normal, we would get a list of 1 element
 myList[1]
 ```
 
@@ -153,21 +155,120 @@ Output
 ```
 </div>
 
+## Modifying Values in a List
 
+The process to modify values in a list is identical to how matrices and vectors have their values modified. Index the item you want to change and assign it to a new value.
 
-## Another sub-topic
+<div class="code-example" markdown="1">
 
-Include text here.
+{: .label }
+Input
+```r
+myList = list(2, 2, 3, "a string", TRUE)
+myList[[3]] <- "another string"
+myList
+```
 
-## Another sub-topic
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
 
-Include text here.
+[[2]]
+[1] 2
 
-## Key Points / Summary
+[[3]]
+[1] "another string"
 
-- Remind the student about what they just learned.
-- You can also note down any key information to keep in mind.
+[[4]]
+[1] "a string"
+
+[[5]]
+[1] TRUE
+```
+</div>
+
+## Adding Elements to a List
+
+There are several ways to add elements to a list. If we simply want to add a new element at the end of a list, we can use the `append()` function.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(2, 3)
+myList <- append(myList, 4)
+myList
+```
+
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 3
+
+[[3]]
+[1] 4
+```
+</div>
+
+You can also use the append function to insert a new element at a specific position by setting `after` to your desired index.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(2, 3)
+myList <- append(myList, 4, after=1)
+myList
+```
+
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 3
+```
+</div>
+
+Finally, you can also add a new element to a list by assigning a value to its named index directly.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(a = "apple", b = "banana")
+myList["c"] <- "cookie"
+myList
+```
+
+{: .label .label-green }
+Output
+```
+$a
+[1] "apple"
+
+$b
+[1] "banana"
+
+$c
+[1] "cookie"
+```
+</div>
 
 ## Additional Resources (optional)
 
-- Here, you can list some additional resources the student can access to learn more about this lesson.
+- If you need to store data of different data types in a container, you can use a list.
