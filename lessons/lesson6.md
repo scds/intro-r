@@ -8,7 +8,7 @@ parent: Lessons
 {: .no_toc}  
 # Lesson 6 - Functions
 
-How do we store data that we can use and modify? Using variables!
+If you find yourself using the same set of code throughout your program multiple times, functions will help immensely.
 
 <details markdown="block">
   <summary>
@@ -28,161 +28,197 @@ The following video demonstrates each of the steps outlined below in text.
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
-## Identifiers
+## What Are Functions?
 
-Identifiers are variable names. When you create, use, or modify a variable, you refer to the variable by its identifier.
+A function contains lines of code that are run when the function is called. Functions can take in any number of inputs, or no inputs at all. Functions can also output a value, but they don't have to either.
 
-R has some rules and restrictions for identifiers.
-- Identifiers can consist of letters (uppercase and lowercase), digits, periods (.), and underscores (_).
-- All identifiers must start with a letter or with a period (.).
-  - If the identifier starts with a period, it cannot be followed by a digit.
-- There are some identifiers reserved for R's use only; they're usually common words like "if", "else", "repeat", etc.
-  - You can find a full list here: <https://www.geeksforgeeks.org/r-keywords/>
-- Identifiers are case-sensitive.
-  - `myVariable` and `MYVARIABLE` are considered two different variables.
+Python provides lots of built-in functions, but you can also make your own.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
-> 
-> Which of the following are valid variable names?
->
-> - myVariable
-> - _digits
-> - 10_hp
-> - repeat
-> - .1name
->
-> <details>
->   <summary> See Answer </summary>
->   <div markdown="1">
->   {: .note-title }                                   
-> > Answer
-> > 
-> > - myVariable is a valid variable name.
-> > - _digits is **not** a valid variable because it begins with an underscore.
-> > - 10_hp is **not** a valid variable name because it begins with a digit.
-> > - repeat is **not** a valid variable name because it's one of R's reserved keywords.
-> > - .1name is **not** a valid variable name because the period is followed by a digit.
->   </div>
-> </details>
+## When Should I Use Functions?
 
-## Assigning Values to Variables
+If you find yourself using the same set of code multiple times throughout your program, you should make a function for it.
 
-The format to create a variable is:
+Benefits of functions:
+- You avoid repeating the same set of code.
+- You only have to edit the code once for it to apply to all areas you use the function.?
+
+## Creating a Function
+
+The general format to create a function is shown below.
 
 ```r
-identifier <- value
+functionName <- function() {
+  code
+}
 ```
 
-Suppose we wanted to assign `myVariable` the value of 10. We would do
+Just like variables, functions also need an identifier. The same identifier rules apply.
+
+Inside the curly brackets { }, you put your lines of code.
+
+## Calling a Function
+
+The format for calling a function you created is the same as calling the built-in R functions.
 
 ```r
-myVariable <- 10
+functionName()
 ```
 
-The line above is read as "`myVariable` is assigned the value of 10."
+## Function Arguments
 
-If we decide later on that we want to reassign the value of `myVariable` to something else, we would again do
-
-```r  
-myVariable <- <new value>
-```
-
-and that would set the value of `myVariable` to our new value.
-
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
-> 
-> What is the value of **a** after this code is executed?
->
-> ```r
-> a <- 2
-> b <- 20
-> a <- b
-> b <- 3
-> ```
-> 
-> <details>
->   <summary> See Answer </summary>
->   <div markdown="1">
->   {: .note-title }                                   
-> > Answer
-> > 
-> > The value of **a** is 20.
-> > 
-> > - Going step-by-step, **a** is assigned the value of 2.     (a = 2)  
-> > - Then, **b** is assigned the value of 20.                  (a = 2, b = 20)  
-> > - **a** is assigned the value of **b**, which is 20.            (a = 20, b = 10)  
-> > - Finally, **b** is assigned the value of 3.                (a = 20, b = 3)
->   </div>
-> </details>
-
-## Using Variables in Math
-
-If we want to use a variable in our math expression, we just reference the variable using its identifier.
-
-```r
-5 * myVariable
-```
-
-and it outputs the answer.
-
-## Finding All Defined Variables
-
-Aside from using the `Environment` tab in RStudio, we can also use the `ls()` function to get a list of all our defined variables.
+As mentioned earlier, functions can take in input values (otherwise known as arguments). 
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-a <- 5
-b <- 2
-myVariable <- 2.5
-.myVariable <- 2.6
+hello <- function(name){
+  print(cat("Hello", name, "!"))
+}
 
-ls()
+hello("Charlie")
+hello("Jessica")
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] "a"          "b"          "myVariable"
+Hello Charlie !
+Hello Jessica !
 ```
 </div>
 
-You'll notice that any variables with an identifier that starts with a period (.) are not shown. If you want to show them as part of the output, you have to define `all.name = TRUE` inside the `ls()` function.
+## Parameters vs Arguments
+
+The terms parameter and argument often get mixed up and used interchangebly. They do however have different meanings.
+
+**Parameter**
+: The variable inside the function definition. In the last example, this would be the `name`.
+
+**Argument**
+: The value that is sent to the function. In the last example, this would be "Charlie" and "Jessica".
+
+## Positional and Keyword Arguments
+
+When calling a function with parameters, the order of your arguments should match up the order that the parameters appear in. These are positional arguments.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-a <- 5
-b <- 2
-myVariable <- 2.5
-.myVariable <- 2.6
+hello <- function(d, c, b, a){
+  print(a)
+  print(b)
+  print(c)
+  print(d)
+}
 
-ls(all.name <- TRUE)
+hello(4, 3, 2, 1)
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] ".myVariable"          "a"          "b"          "myVariable"
+1
+2
+3
+4
 ```
 </div>
 
-## Deleting a Variable
+Alternatively, if you don't know what order you should put your arguments in, you can assign your arguments by name. These are called keyword arguments.
 
-If you wanted to delete a variable, you can use the `rm()` function.
+<div class="code-example" markdown="1">
 
+{: .label }
+Input
 ```r
-myVariable <- 5
-rm(myVariable)
+hello <- function(d, c, b, a){
+  print(a)
+  print(b)
+  print(c)
+  print(d)
+}
+
+hello(a=1, b=2, c=3, d=4)
 ```
+
+{: .label .label-green }
+Output
+```
+1
+2
+3
+4
+```
+</div>
+
+## Default Arguments
+
+You can also assign parameters a default value. These are useful if you want to create optional parameters.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+hello <- function(d, c, b=4, a=5){
+  print(a)
+  print(b)
+  print(c)
+  print(d)
+}
+
+hello(1, 2)
+```
+
+{: .label .label-green }
+Output
+```
+5
+4
+2
+1
+```
+</div>
+
+Typically, any parameters with default values appear at the end.
+
+## Return Values
+
+So far, all of our functions have just created text in the console. We can also output values using the `return()` function.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+quadratic <- function(a, b, c){
+  x1 <- ( -b + sqrt(b^2 - 4*a*c) ) / (2 * a)
+  x2 <- ( -b - sqrt(b^2 - 4*a*c) ) / (2 * a)
+  
+  value <- c(x1, x2)
+  return(value)
+}
+
+equation1 <- quadratic(1, 5, 6)
+equation2 <- quadratic(1, 5, 4)
+
+cat("The two roots of x^2 + 5x + 6 are", equation1[1], "and", equation1[2])
+cat("The two roots of x^2 + 5x + 4 are", equation2[1], "and", equation2[2])
+```
+
+{: .label .label-green }
+Output
+```
+The two roots of x^2 + 5x + 6 are -2 and -3
+The two roots of x^2 + 5x + 4 are -1 and -4
+```
+</div>
 
 ## Key Points / Summary
 
-- You can use variables to store data.
-
+- You can create reusable pieces of code using functions.
+- Parameters are the variables inside the function declaration, whereas arguments are the values passed to the function.
