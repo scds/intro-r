@@ -20,7 +20,7 @@ If you find yourself using the same set of code throughout your program multiple
 </details>
 
 ## Lesson Objectives
-- Use variables to store and modify data.
+- Use functions to create reusable code
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
