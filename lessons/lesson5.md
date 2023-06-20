@@ -323,7 +323,34 @@ Output
 
 In the `for` loop above, we iterate over every item in the vector of data we created. We then add that value to the `sum` variable. Once we go through all the values, we print the `sum`.
 
+Another common use for the `for` loop is to iterate over a vector of consecutive integers using the `:` operator.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+for(value in 1:10) {
+  cat("This is loop #", value, "\n", sep="")
+}
+```
+
+{: .label .label-green }
+Output
+```
+This is loop #1
+This is loop #2
+This is loop #3
+This is loop #4
+This is loop #5
+This is loop #6
+This is loop #7
+This is loop #8
+This is loop #9
+This is loop #10
+```
+</div>
+
 ## Key Points / Summary
-- key point 1
-- 2
-- 3
+- You can use `if` statements to create conditional code.
+- Use `repeat`, `while`, and `for` loops to loop code or iterate through containers. 
