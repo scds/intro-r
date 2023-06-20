@@ -269,6 +269,6 @@ $c
 ```
 </div>
 
-## Additional Resources (optional)
+## Key Points / Summary
 
-- If you need to store data of different data types in a container, you can use a list.
+- Lists should be used when you need to store data of multiple data types
