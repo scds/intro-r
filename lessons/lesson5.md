@@ -110,17 +110,18 @@ In the example above, the code inside the first pair of braces { } runs if the l
 >   </div>
 > </details>
 
-### `elif` Blocks
+### `else if` Blocks
 
 Sometimes, `if` and `else` is not enough. You might need to test multiple ranges of numbers. This is where the `elif` keyword comes in.
 
 ```r
-if logical1:
+if(logical1) {
   # code1
-elif logical2:
+} else if(logical2) {
   # code2
-else:
+} else {
   # code3
+}
 ```
 
 In the example above, code in `# code1` is executed if `logical` evalutes to be `TRUE`. If and only if `logical` evaluates to be `FALSE`, it will test `logical2`. If `logical2` is `TRUE`, the code in `# code2` is executed. Otherwise, the code inside `# code3` is executed.
@@ -134,11 +135,11 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > mark = 67
 > if (mark > 80) {
 >   cat("You got an A!")
-> } elif (mark > 70) {
+> } else if (mark > 70) {
 >   cat("You got a B!")
-> } elif (mark > 60) {
+> } else if (mark > 60) {
 >   cat("You got a C!")
-> } elif (mark > 50) {
+> } else if (mark > 50) {
 >   cat("You got a D!")
 > } else {
 >   cat("Better luck next time!")
@@ -201,15 +202,15 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > heads = c(TRUE, FALSE)
 > if (heads[1]) {
 >   if (heads[2]) {
->     print("You got 2 heads!")
+>     cat("You got 2 heads!")
 >   } else {
->     print("You got 1 head.")
+>     cat("You got 1 head.")
 >   }
 > } else {
 >   if (heads[2]) {
->     print("You got 1 head.")
+>     cat("You got 1 head.")
 >   } else {
->     print("You got 0 heads.")
+>     cat("You got 0 heads.")
 >   }
 > }
 > ```

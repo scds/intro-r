@@ -74,7 +74,7 @@ As mentioned earlier, functions can take in input values (otherwise known as arg
 Input
 ```r
 hello <- function(name){
-  print(cat("Hello", name, "!"))
+  cat("Hello", name, "!\n")
 }
 
 hello("Charlie")
@@ -109,7 +109,8 @@ When calling a function with parameters, the order of your arguments should matc
 Input
 ```r
 hello <- function(d, c, b, a){
-  print(a)
+  # The print() function is similar to cat(), but it only displays one item. It also automatically adds in a new line.
+  print(a) 
   print(b)
   print(c)
   print(d)
@@ -121,10 +122,10 @@ hello(4, 3, 2, 1)
 {: .label .label-green }
 Output
 ```
-1
-2
-3
-4
+[1] 1
+[1] 2
+[1] 3
+[1] 4
 ```
 </div>
 
@@ -148,10 +149,10 @@ hello(a=1, b=2, c=3, d=4)
 {: .label .label-green }
 Output
 ```
-1
-2
-3
-4
+[1] 1
+[1] 2
+[1] 3
+[1] 4
 ```
 </div>
 
@@ -177,10 +178,10 @@ hello(1, 2)
 {: .label .label-green }
 Output
 ```
-5
-4
-2
-1
+[1] 5
+[1] 4
+[1] 2
+[1] 1
 ```
 </div>
 
@@ -206,8 +207,8 @@ quadratic <- function(a, b, c){
 equation1 <- quadratic(1, 5, 6)
 equation2 <- quadratic(1, 5, 4)
 
-cat("The two roots of x^2 + 5x + 6 are", equation1[1], "and", equation1[2])
-cat("The two roots of x^2 + 5x + 4 are", equation2[1], "and", equation2[2])
+cat("The two roots of x^2 + 5x + 6 are", equation1[1], "and", equation1[2], "\n")
+cat("The two roots of x^2 + 5x + 4 are", equation2[1], "and", equation2[2], "\n")
 ```
 
 {: .label .label-green }

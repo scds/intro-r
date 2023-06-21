@@ -50,7 +50,7 @@ myString
 {: .label .label-green }
 Output
 ```
-"Hello, World!"
+[1] "Hello, World!"
 ```
 </div>
 
@@ -74,13 +74,6 @@ If you need to use both single quotes ' ' and double quotes " ", you need to put
 myString <- "He said that \"He's happy\""
 myString <- 'He said that "He\'s happy"'
 ```
-
-{: .note }
-> You'll notice that if you inspect `myString`, it print with the quotations and backslash shown. You can use the `cat()` function to print it as it should look like.
-> 
-> ```r
-> cat(myString)
-> ```
 
 ## String Concatenation
 
@@ -110,11 +103,11 @@ Johnny said that "He's happy".
 {: .warning}
 > `cat()` does not create a newline at the end of the string, so sometimes it creates some funky output like the following:
 >
-> <img alt="" width="60%" src="../assets/img/lessons/cat1.png">
+> <img alt="two lines without a line break" width="60%" src="../assets/img/lessons/cat1.png">
 >
 > To avoid this, add `\n` at the end.
 > 
-> <img alt="" width="60%" src="../assets/img/lessons/cat2.png">
+> <img alt="two lines now have a line break" width="60%" src="../assets/img/lessons/cat2.png">
 >
 > Don't worry about the line with `for`. All it does is loop the code, we'll talk about it in [lesson 5.](lesson5)
 
@@ -158,7 +151,7 @@ myString2
 {: .label .label-green }
 Output
 ```
-"The first number is 2"
+[1] "The first number is 2"
 ```
 </div>
 
@@ -182,7 +175,7 @@ nchar(myString)
 {: .label .label-green }
 Output
 ```
-6
+[1] 6
 ```
 </div>
 
@@ -203,8 +196,8 @@ tolower(myString)
 {: .label .label-green }
 Output
 ```
-"HELLO!"
-"hello!"
+[1] "HELLO!"
+[1] "hello!"
 ```
 </div>
 
@@ -227,7 +220,7 @@ substring(myString, 3, 5)
 {: .label .label-green }
 Output
 ```
-"llo"
+[1] "llo"
 ```
 </div>
 
@@ -251,9 +244,9 @@ grepl("intro", "machine learning with r: linear regression", fixed=TRUE)
 {: .label .label-green }
 Output
 ```
-TRUE
-FALSE
-FALSE
+[1] TRUE
+[1] FALSE
+[1] FALSE
 ```
 </div>
 

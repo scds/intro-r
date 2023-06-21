@@ -17,9 +17,9 @@ Add, edit, or remove any content below for the workshop in question. -->
 <!-- Main header -->
 # Introduction to R
 
-R has a powerful suite of high-level statistical functions, but sometimes you need lower-level control over the functionality of your script. No prior knowledge of R is required.
+R has a powerful suite of high-level statistical functions, but sometimes you need lower-level control over the functionality of your script. No prior knowledge of R is required. In this workshop, you will learn how to write programs in R using functions and control flow. We will cover variables, data types, functions, conditional blocks, loops, and debugging. 
 
-Presentation by Isaac Kinley, DASH Support Assistant and PhD Candidate in Psychology, Neuroscience, and Behaviour. [Book an appointment with Isaac or another member of the DASH Team.](https://library.mcmaster.ca/services/dash)
+This workshop is offered by the Data Analysis Support Hub (DASH). [Get in touch with DASH.](https://library.mcmaster.ca/services/dash)
 
 ## Prerequisites
 

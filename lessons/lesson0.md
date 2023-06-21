@@ -41,36 +41,36 @@ The following video demonstrates each of the steps outlined below in text.
 
 A typical RStudio window has 4 important sections. The source code, the console, the environment, and a fourth section for files, plots, packages, or help.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio1.png" style="border: 2px solid #000;">
+<img alt="RStudio window" width="100%" src="../assets/img/lessons/rstudio1.png" style="border: 2px solid #000;">
 
 ### Source Code
 
 This is the section where you'll be writing all your R code. You can also save your R code to a file to come back to it easily.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio2.png" style="border: 2px solid #000;">
+<img alt="source code" width="100%" src="../assets/img/lessons/rstudio2.png" style="border: 2px solid #000;">
 
 {: .note }
 > If you don't see this section, go to `File` > `New File` > `R Script`. This should make the source code section appear.
 > 
-> <img alt="" width="100%" src="../assets/img/lessons/rstudio3.png" style="border: 2px solid #000;">
+> <img alt="creating a new R script" width="100%" src="../assets/img/lessons/rstudio3.png" style="border: 2px solid #000;">
 
 ### Console
 
 The console will show you the output of your code and any errors that you may come about. You can also type R commands directly into the console to run them.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio4.png" style="border: 2px solid #000;">
+<img alt="console window" width="100%" src="../assets/img/lessons/rstudio4.png" style="border: 2px solid #000;">
 
 ### Environment
 
 In the environment section, you can see all currently stored data. If you want to start from a clean slate, you can use the brush button to wipe your environment clean.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio5.png" style="border: 2px solid #000;">
+<img alt="environment variables" width="100%" src="../assets/img/lessons/rstudio5.png" style="border: 2px solid #000;">
 
 ### Other
 
 This last section has everything else you might need. A file explorer window, an area to view plots/graphs, a list of currently installed packages, and a section to get help.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio6.png" style="border: 2px solid #000;">
+<img alt="other tabs" width="100%" src="../assets/img/lessons/rstudio6.png" style="border: 2px solid #000;">
 
 ## Creating and Running Code
 
@@ -78,7 +78,7 @@ Any code you want to be able to rerun in the future should be written in the sou
 
 To run a line of code, click on the line you want to run and click on the `Run` button.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio7.png" style="border: 2px solid #000;">
+<img alt="running code in R" width="100%" src="../assets/img/lessons/rstudio7.png" style="border: 2px solid #000;">
 
 Alternatively, you can also use the `Ctrl` + `Enter` keyboard shortcut.
 
@@ -86,7 +86,7 @@ If you want to run multiple lines of code at once (or the entire file), highligh
 
 If you want to work with your data interactively, you can also run R commands in the console. This is most useful for testing and debugging purposes.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio8.png" style="border: 2px solid #000;">
+<img alt="using the console interactively" width="100%" src="../assets/img/lessons/rstudio8.png" style="border: 2px solid #000;">
 
 ## Installing Packages
 
@@ -94,7 +94,7 @@ Packages are extensions to the R programming language. They provide additional f
 
 To install packages in R, navigate to the `Packages` section in the bottom right area. You'll see a list of enabled and disabled installed packages. If you don't see the package you want, you can click on the `Install` button and search it by name.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio9.png" style="border: 2px solid #000;">
+<img alt="installing packages using CRAN" width="100%" src="../assets/img/lessons/rstudio9.png" style="border: 2px solid #000;">
 
 ## Getting Help
 
@@ -102,7 +102,7 @@ To get help with anything in the R programming language, you can use the help pa
 
 If you need help with a particular function, type `?functionName` in the console. This will open up the function's help page.
 
-<img alt="" width="100%" src="../assets/img/lessons/rstudio10.png" style="border: 2px solid #000;">
+<img alt="getting help" width="100%" src="../assets/img/lessons/rstudio10.png" style="border: 2px solid #000;">
 
 <!-- Summarize your learning objectives here. It acts as a reminder to the learner about what they just learned, as well as a checklist for you to make sure you covered everything you wished to cover. -->
 ## Key Points / Summary

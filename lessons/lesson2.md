@@ -182,6 +182,50 @@ myVariable <- 5
 rm(myVariable)
 ```
 
+## Writing Comments in your Code
+
+Sometimes, it's useful to write yourself (or others) comments about your code. They can be used to explain pieces of code, and generally, they make the code more readable.
+
+R considers everything after a `#` symbol a comment and ignores it when executing the code.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+# sqrt() is the square root function
+sqrt(4)
+sqrt(16)
+```
+
+{: .label .label-green }
+Output
+```
+[1] 2
+[1] 4
+```
+</div>
+
+Since R ignores comments, you can also use it to prevent lines of code from being executed. This is particularly useful when troubleshooting issues with your code.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+# sqrt() is the square root function
+# sqrt(4)
+sqrt(16)
+```
+
+{: .label .label-green }
+Output
+```
+[1] 4
+```
+
+</div>
+
 ## Key Points / Summary
 
 - You can use variables to store data.

@@ -51,7 +51,7 @@ Input
 {: .label .label-green }
 Output
 ```
-6
+[1] 6
 ```
 </div>
 
@@ -77,7 +77,7 @@ Input
 {: .label .label-green }
 Output
 ```
-0
+[1] 0
 ```
 </div>
 
@@ -93,7 +93,7 @@ Input
 {: .label .label-green }
 Output
 ```
-43.13777
+[1] 43.13777
 ```
 </div>
 
@@ -111,7 +111,7 @@ sqrt(16)
 {: .label .label-green }
 Output
 ```
-4
+[1] 4
 ```
 </div>
 

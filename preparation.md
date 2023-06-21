@@ -23,15 +23,15 @@ An example is provided below.
 - Navigate to <https://cran.rstudio.com/>.
 - Click on `Download R for Windows`
 
-<img width="100%" src="assets/img/preparation/windows1.png" style="border: 2px solid black">
+<img alt="download and install R" width="100%" src="assets/img/preparation/windows1.png" style="border: 2px solid black">
 
 - Click on `base`
 
-<img width="100%" src="assets/img/preparation/windows2.png" style="border: 2px solid black">
+<img alt="base subdirectory" width="100%" src="assets/img/preparation/windows2.png" style="border: 2px solid black">
 
 - Click on `Download R... for Windows`
 
-<img width="100%" src="assets/img/preparation/windows3.png" style="border: 2px solid black">
+<img alt="download R for windwos" width="100%" src="assets/img/preparation/windows3.png" style="border: 2px solid black">
 
 - Run the executable and install.
 
@@ -43,11 +43,11 @@ An example is provided below.
 - Navigate to <https://cran.rstudio.com/>.
 - Click on `Download R for macOS`
 
-<img width="100%" src="assets/img/preparation/mac1.png" style="border: 2px solid black">
+<img alt="download and install R" width="100%" src="assets/img/preparation/mac1.png" style="border: 2px solid black">
 
 - Choose the correct install for your Mac.
 
-<img width="100%" src="assets/img/preparation/mac2.png" style="border: 2px solid black">
+<img alt="select AMD or Intel Mac" width="100%" src="assets/img/preparation/mac2.png" style="border: 2px solid black">
 
 </details>
 
@@ -57,11 +57,11 @@ An example is provided below.
 - Navigate to <https://cran.rstudio.com/>.
 - Click on `Download R for Linux`
 
-<img width="100%" src="assets/img/preparation/linux1.png" style="border: 2px solid black">
+<img alt="download and install R" width="100%" src="assets/img/preparation/linux1.png" style="border: 2px solid black">
 
 - Choose your Linux distribution and follow the instructions provided.
 
-<img width="100%" src="assets/img/preparation/linux2.png" style="border: 2px solid black">
+<img alt="choose Linux distribution" width="100%" src="assets/img/preparation/linux2.png" style="border: 2px solid black">
 
 </details>
 

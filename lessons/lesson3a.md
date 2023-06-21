@@ -77,7 +77,7 @@ a^2 == 2 # This *should* return TRUE because the square of square root 2 is 2.
 {: .label .label-green }
 Output
 ```
-FALSE
+[1] FALSE
 ```
 </div>
 
@@ -124,7 +124,7 @@ Input
 {: .label .label-green }
 Output
 ```
--3+5i
+[1] -3+5i
 ```
 </div>
 

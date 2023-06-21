@@ -53,7 +53,7 @@ The three most common operations are listed in the table below.
 
 ### AND
 
-The AND operator results in True if both booleans are already True. Otherwise, it becomes False.
+The AND operator results in TRUE if both booleans are already TRUE. Otherwise, it becomes FALSE.
 
 <div class="code-example" markdown="1">
 
@@ -71,14 +71,14 @@ a & c
 {: .label .label-green }
 Output
 ```
-TRUE
-FALSE
+[1] TRUE
+[1] FALSE
 ```
 </div>
 
 ### OR
 
-The OR operator results in True if at least one boolean is True. Otherwise, it becomes False.
+The OR operator results in TRUE if at least one boolean is TRUE. Otherwise, it becomes FALSE.
 
 <div class="code-example" markdown="1">
 
@@ -96,14 +96,14 @@ c | c
 {: .label .label-green }
 Output
 ```
-TRUE
-FALSE
+[1] TRUE
+[1] FALSE
 ```
 </div>
 
 ### NOT
 
-The NOT operator reverses the current value. True becomes False, and False becomes True.
+The NOT operator reverses the current value. TRUE becomes FASLE, and FALSE becomes TRUE.
 
 <div class="code-example" markdown="1">
 
@@ -120,8 +120,8 @@ c = False
 {: .label .label-green }
 Output
 ```
-FALSE
-TRUE
+[1] FALSE
+[1] TRUE
 ```
 </div>
 
@@ -164,9 +164,9 @@ Input
 {: .label .label-green }
 Output
 ```
-TRUE
-FALSE
-TRUE
+[1] TRUE
+[1] FALSE
+[1] TRUE
 ```
 </div>
 
