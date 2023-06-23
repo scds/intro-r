@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Lesson 4d - Data Frames
-nav_order: 2
+title: Lesson 4d - Lists
+nav_order: 4
 parent: Lesson 4 - Collections
 grand_parent: Lessons
 ---
 
 {: .no_toc}  
-# Lesson 4d - Data Frames
+# Lesson 4d - Lists
 
-Data frames are the last type of container that we'll be covering. 
+Lists are another type of container that R has to offer.
 
 <details markdown="block">
   <summary>
@@ -21,7 +21,7 @@ Data frames are the last type of container that we'll be covering.
 </details>
 
 ## Lesson Objectives
-- Use data frames to create two dimensional containers with elements of multiple data types
+- Use lists to create containers with elements of multiple data types
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
@@ -29,221 +29,246 @@ The following video demonstrates each of the steps outlined below in text.
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
-## What is a Data Frame?
+## What is a List?
 
-A data frame is another type of container that can contain elements of different data types, like lists. However, data in the same column must have the same data type. They are also two dimensional, like matrices.
+A list is a container that can contain elements of different data types, unlike vectors.
 
-## Creating a Data Frame
+## Creating a List
 
-The format to create a data frame is the following:
+The format to create a list is the following:
 
 ```r
-myDataFrame = data.frame(
-  columnName1 = c(value, value1, value2, ...),
-  columnName2 = c(value3, value4, value5, ...),
-  ... # and so on
-)
+myList = list(value1, value2, value3, ...)
 ```
 
-Data frames behave a lot like tables, or Excel sheets. 
+## Storing Values by Name
+
+Just like with vectors, we can give values keys so that we can reference them by name later on.
+
+```r
+myList = list(a = "apple", b = 2, c = TRUE)
+```
+
+## Accessing Items in a List
+
+Lists are strange when it comes to indexing.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-myDataFrame
+myList <- list(2, 2, 3, "a string", TRUE)
+
+# if we were to access the first index like normal, we would get a list of 1 element
+myList[1]
 ```
 
 {: .label .label-green }
 Output
 ```
-      name age         faculty
-1   Hannah  18     Engineering
-2     John  19      Humanities
-3 Mohammad  18 Social Sciences
-4    Maria  18      Humanities
+[[1]]
+[1] 2
 ```
 </div>
 
-You can also use the `View()` function to open the data frame as a seperate tab.
+To get the actual value, we need to use double square brackets [[ ]].
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-View(myDataFrame) # Take note of the capital V in "View"
-```
+myList <- list(2, 2, 3, "a string", TRUE)
 
-{: .label .label-green }
-Output
-<img alt="" width="100%" src="../assets/img/lessons/dataFrame1.png">
-</div>
-
-## Accessing Items in a Data Frame
-
-Just like lists, data frames return data differently if you use `[` compared to `[[`.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-
-# accessing with a single [ returns a new data frame.
-myDataFrame["name"]
+myList[[1]]
 ```
 
 {: .label .label-green }
 Output
 ```
-      name
-1   Hannah
-2     John
-3 Mohammad
-4    Maria
+[1] 2
 ```
 </div>
 
-Using `[[` returns a vector of the column rather than a data frame.
+This makes a huge difference when you're using the values given to you.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
+myList <- list(2, 2, 3, "a string", TRUE)
 
-# accessing with a single [ returns a new data frame.
-myDataFrame[["name"]]
+myList[[1]] + 1     # Correct
+myList[1] + 1       # Incorrect
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] "Hannah"   "John"     "Mohammad" "Maria"
+[1] 3
+Error in myList[1] + 1 : non-numeric argument to binary operator
 ```
 </div>
 
-## Accessing Items like a Matrix
-
-You can also access items using the matrix notation.
-
-```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-
-myDataFrame[1,"age"]       # gets the first item in the "age" column
-myDataFrame[2,"name"]      # gets the second item in the "name" column
-
-myDataFrame[2,]            # gets all items in row 2 as a data frame
-myDataFrame[,"age"]        # gets all items in column 2 as a vector
-
-myDataFrame[2,, drop=FALSE]        # gets all items in row 2 as a data frame
-myDataFrame[,"age", drop=FALSE]        # gets all items in column 2 as a data frame
-
-myDataFrame[c(1,2),]   # gets all items in rows 1 and 2 ]
-myDataFrame[,"age"]       # gets all items except in column "age"
-
-myDataFrame[,]         # gets all items
-```
-
-You can also refer to the columns by number (based on the order they come in).
-
-```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-
-myDataFrame[,1]            # gets all items in the "name" column, because it's the first column 
-```
-
-## Modifying Values in a Data Frame
-
-Modifying values in a data frame works just like any other container.
+### Accessing Values by Name
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-
-myDataFrame[3, "age"] = 19
-myDataFrame
+myList = list(a = "apple", b = 2, c = TRUE)
+myList[["a"]]
 ```
 
 {: .label .label-green }
 Output
 ```
-      name age         faculty
-1   Hannah  18     Engineering
-2     John  19      Humanities
-3 Mohammad  19 Social Sciences
-4    Maria  18      Humanities
+[1] "apple"
 ```
 </div>
 
-## Adding Rows and Columns to a Data Frame
-
-Just like matrices, you can add rows and columns to a data frame using the `cbind()` function for columns, and the `rbind()` function for rows.
+### Accessing Multiple Items
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myDataFrame = data.frame(
-  name = c("Hannah", "John", "Mohammad", "Maria"),
-  age = c(18, 19, 18, 18),
-  faculty = c("Engineering", "Humanities", "Social Sciences", "Humanities")
-)
-myDataFrame <- rbind(myDataFrame, list("Hank", 20, "Health Sciences"))
-myDataFrame
+myList = list(2, 2, 3, "a string", TRUE)
+myList[c(1, 2, 4)] # Creates a new list with only items #1, #2, and #4
 ```
 
 {: .label .label-green }
 Output
 ```
-      name age         faculty
-1   Hannah  18     Engineering
-2     John  19      Humanities
-3 Mohammad  18 Social Sciences
-4    Maria  18      Humanities
-5     Hank  20 Health Sciences
+[[1]]
+[1] 2
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] "a string"
+```
+</div>
+
+## Modifying Values in a List
+
+The process to modify values in a list is identical to how matrices and vectors have their values modified. Index the item you want to change and assign it to a new value.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(2, 2, 3, "a string", TRUE)
+myList[[3]] <- "another string"
+myList
+```
+
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] "another string"
+
+[[4]]
+[1] "a string"
+
+[[5]]
+[1] TRUE
+```
+</div>
+
+## Adding Elements to a List
+
+There are several ways to add elements to a list. If we simply want to add a new element at the end of a list, we can use the `append()` function.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(2, 3)
+myList <- append(myList, 4)
+myList
+```
+
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 3
+
+[[3]]
+[1] 4
+```
+</div>
+
+You can also use the append function to insert a new element at a specific position by setting `after` to your desired index.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(2, 3)
+myList <- append(myList, 4, after=1)
+myList
+```
+
+{: .label .label-green }
+Output
+```
+[[1]]
+[1] 2
+
+[[2]]
+[1] 4
+
+[[3]]
+[1] 3
+```
+</div>
+
+Finally, you can also add a new element to a list by assigning a value to its named index directly.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+myList = list(a = "apple", b = "banana")
+myList["c"] <- "cookie"
+myList
+```
+
+{: .label .label-green }
+Output
+```
+$a
+[1] "apple"
+
+$b
+[1] "banana"
+
+$c
+[1] "cookie"
 ```
 </div>
 
 ## Key Points / Summary
 
-- You can use data frames to get a table-like data format.
-- Columns in data frames must have the same data type (vectors), but the rows can have different data types (lists).
+- Lists should be used when you need to store data of multiple data types

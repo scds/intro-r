@@ -26,6 +26,10 @@ You should now be able to:
 # Additional Resources
 To learn more about any particular topic, take a look at the links below.
 
+## Hypothesis Testing and Regression Analysis in R Workshop
+The SCDS also offers a workshop for Hypothesis Testing and Regression Analysis in R.
+- <https://scds.github.io/hypothesis-testing-regression-analysis-r/>
+
 ## CRAN Packages
 This is a full list of all the packages available for R through the Package Installer in RStudio.
 - <https://cran.r-project.org/web/packages/available_packages_by_name.html>

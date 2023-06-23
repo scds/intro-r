@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Lesson 4c - Lists
-nav_order: 2
+title: Lesson 4c - Arrays
+nav_order: 3
 parent: Lesson 4 - Collections
 grand_parent: Lessons
 ---
 
 {: .no_toc}  
-# Lesson 4c - Lists
+# Lesson 4c - Arrays
 
-Lists are another type of container that R has to offer.
+Arrays are yet another container type similar to vectors and matrices.
 
 <details markdown="block">
   <summary>
@@ -21,7 +21,7 @@ Lists are another type of container that R has to offer.
 </details>
 
 ## Lesson Objectives
-- Use lists to create containers with elements of multiple data types
+- Briefly mention arrays
 
 <!-- ## Lesson Video
 The following video demonstrates each of the steps outlined below in text.
@@ -29,246 +29,157 @@ The following video demonstrates each of the steps outlined below in text.
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false"></iframe>
 [View original here.](https://echo360.ca/media/a65689c0-c35c-4f33-9c12-f0ac97883f54/public?autoplay=false&automute=false) -->
 
-## What is a List?
+## What is an Array?
 
-A list is a container that can contain elements of different data types, unlike vectors.
+An array can be thought of as a vector of matrices, or a three dimensional container. It has x rows, y columns, and z tables of x by y.
 
-## Creating a List
+Just like vectors and matrices, they can only contain data of a single type.
 
-The format to create a list is the following:
+## Creating an Array
 
-```r
-myList = list(value1, value2, value3, ...)
-```
-
-## Storing Values by Name
-
-Just like with vectors, we can give values keys so that we can reference them by name later on.
+The format to create an array is the following:
 
 ```r
-myList = list(a = "apple", b = 2, c = TRUE)
+myArray = array(vector, c(nRow, nCol, nTables))
 ```
 
-## Accessing Items in a List
-
-Lists are strange when it comes to indexing.
+Where `vector` is a vector with the contents of the array, `nRow` is the number of rows, `nCol` is the number of columns, and `nTables` is the number of tables.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myList <- list(2, 2, 3, "a string", TRUE)
-
-# if we were to access the first index like normal, we would get a list of 1 element
-myList[1]
+myArray = array(1:30, c(5, 2, 3)) # This creates 3 matrices that have 5 rows and 2 columns. The contents of the array are the consecutive numbers from 1 to 30.
+myArray
 ```
 
 {: .label .label-green }
 Output
 ```
-[[1]]
-[1] 2
+, , 1
+
+     [,1] [,2]
+[1,]    1    6
+[2,]    2    7
+[3,]    3    8
+[4,]    4    9
+[5,]    5   10
+
+, , 2
+
+     [,1] [,2]
+[1,]   11   16
+[2,]   12   17
+[3,]   13   18
+[4,]   14   19
+[5,]   15   20
+
+, , 3
+
+     [,1] [,2]
+[1,]   21   26
+[2,]   22   27
+[3,]   23   28
+[4,]   24   29
+[5,]   25   30
 ```
 </div>
 
-To get the actual value, we need to use double square brackets [[ ]].
+## Accessing Items in an Array
+
+Accessing works just like with matrices, but with an added dimension.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myList <- list(2, 2, 3, "a string", TRUE)
-
-myList[[1]]
+myArray = array(1:30, c(5, 2, 3))
+myArray[2,1,2] # Gets the item in row2, column1, table2
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] 2
+[1] 12
 ```
 </div>
 
-This makes a huge difference when you're using the values given to you.
+Just like matrices, you can also index for rows, columns, or tables of information at a time.
+
+## Accessing Items like a Matrix
+
+You can also access items using the matrix notation.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myList <- list(2, 2, 3, "a string", TRUE)
-
-myList[[1]] + 1     # Correct
-myList[1] + 1       # Incorrect
+myArray = array(1:30, c(5, 2, 3))
+myArray[,1,c(1,2)] # Gets the items in column1, table1&2
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] 3
-Error in myList[1] + 1 : non-numeric argument to binary operator
+     [,1] [,2]
+[1,]    1   11
+[2,]    2   12
+[3,]    3   13
+[4,]    4   14
+[5,]    5   15
 ```
 </div>
 
-### Accessing Values by Name
+## Modifying Values in an Array
+
+Modifying values in an array works just like any other container.
 
 <div class="code-example" markdown="1">
 
 {: .label }
 Input
 ```r
-myList = list(a = "apple", b = 2, c = TRUE)
-myList[["a"]]
+myArray = array(1:30, c(5, 2, 3))
+myArray[1,1,1] = -1
+myArray
 ```
 
 {: .label .label-green }
 Output
 ```
-[1] "apple"
-```
-</div>
+, , 1
 
-### Accessing Multiple Items
+     [,1] [,2]
+[1,]   -1    6
+[2,]    2    7
+[3,]    3    8
+[4,]    4    9
+[5,]    5   10
 
-<div class="code-example" markdown="1">
+, , 2
 
-{: .label }
-Input
-```r
-myList = list(2, 2, 3, "a string", TRUE)
-myList[c(1, 2, 4)] # Creates a new list with only items #1, #2, and #4
-```
+     [,1] [,2]
+[1,]   11   16
+[2,]   12   17
+[3,]   13   18
+[4,]   14   19
+[5,]   15   20
 
-{: .label .label-green }
-Output
-```
-[[1]]
-[1] 2
+, , 3
 
-[[2]]
-[1] 2
-
-[[3]]
-[1] "a string"
-```
-</div>
-
-## Modifying Values in a List
-
-The process to modify values in a list is identical to how matrices and vectors have their values modified. Index the item you want to change and assign it to a new value.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-myList = list(2, 2, 3, "a string", TRUE)
-myList[[3]] <- "another string"
-myList
-```
-
-{: .label .label-green }
-Output
-```
-[[1]]
-[1] 2
-
-[[2]]
-[1] 2
-
-[[3]]
-[1] "another string"
-
-[[4]]
-[1] "a string"
-
-[[5]]
-[1] TRUE
-```
-</div>
-
-## Adding Elements to a List
-
-There are several ways to add elements to a list. If we simply want to add a new element at the end of a list, we can use the `append()` function.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-myList = list(2, 3)
-myList <- append(myList, 4)
-myList
-```
-
-{: .label .label-green }
-Output
-```
-[[1]]
-[1] 2
-
-[[2]]
-[1] 3
-
-[[3]]
-[1] 4
-```
-</div>
-
-You can also use the append function to insert a new element at a specific position by setting `after` to your desired index.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-myList = list(2, 3)
-myList <- append(myList, 4, after=1)
-myList
-```
-
-{: .label .label-green }
-Output
-```
-[[1]]
-[1] 2
-
-[[2]]
-[1] 4
-
-[[3]]
-[1] 3
-```
-</div>
-
-Finally, you can also add a new element to a list by assigning a value to its named index directly.
-
-<div class="code-example" markdown="1">
-
-{: .label }
-Input
-```r
-myList = list(a = "apple", b = "banana")
-myList["c"] <- "cookie"
-myList
-```
-
-{: .label .label-green }
-Output
-```
-$a
-[1] "apple"
-
-$b
-[1] "banana"
-
-$c
-[1] "cookie"
+     [,1] [,2]
+[1,]   21   26
+[2,]   22   27
+[3,]   23   28
+[4,]   24   29
+[5,]   25   30
 ```
 </div>
 
 ## Key Points / Summary
 
-- Lists should be used when you need to store data of multiple data types
+- Arrays are another type of container that R has to offer.
+- Just like vectors and matrices, arrays can only contain data of a single type.
