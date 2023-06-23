@@ -243,6 +243,37 @@ Output
 ```
 </div>
 
+## Reading from a CSV File
+
+Since data frames are essentially tables of data, one useful feature of R is the ability to read data from a CSV file and save it as a data frame using the `read.csv()` function.
+
+To read CSV files, you need to supply a file path to `read.csv()`. That file path can be absolute (something like `C:\Users\USER\Documents\R\data.csv`), or relative to your current working directory. You can find your current working directory using the `getwd()` function.
+
+<div class="code-example" markdown="1">
+
+{: .label }
+Input
+```r
+getwd()
+```
+
+{: .label .label-green }
+Output
+```
+[1] "C:/Users/USER/Documents/R"
+```
+</div>
+
+If your CSV file is in the same folder as your working directory, you can simply name the file.
+
+```r
+myData <- read.csv("data.csv")
+```
+
+This will turn your CSV file into an R data frame.
+
+If you are interested in what else `read.csv()` has to offer, check out [this resource](https://sparkbyexamples.com/r-programming/r-read-csv-file-with-examples/?expand_article=1) that goes further in depth about the different parameters and settings it offers. 
+
 ## Key Points / Summary
 
 - You can use data frames to get a table-like data format.
