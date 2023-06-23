@@ -1,5 +1,5 @@
 # Introduction to R
-Materials for the DMDS workshop: **Introduction to R**  
+Materials for the DASH workshop: **Introduction to R**  
 
 This repository contains workshop files, as well as files used to create the [workshop webpage](https://scds.github.io/intro-r/) with GitHub Pages. 
 
