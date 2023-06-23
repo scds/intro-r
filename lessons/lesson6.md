@@ -219,6 +219,29 @@ The two roots of x^2 + 5x + 4 are -1 and -4
 ```
 </div>
 
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> Create a function with a `number` parameter. The function should return `TRUE` if a number is positive (or 0), and `FALSE` if a number is negative.
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> >
+> > ```r
+> > checkPositive <- function(number) {
+> >   if(number >= 0) {
+> >     return(TRUE)
+> >   } else {
+> >     return(FALSE)  
+> >   }
+> > }
+> > ```
+>   </div>
+> </details>
+
 ## Key Points / Summary
 
 - You can create reusable pieces of code using functions.

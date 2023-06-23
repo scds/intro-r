@@ -296,6 +296,34 @@ Output
 
 Rather than specifying when to stop the loop, you specify a condition that must be met for the loop to continue. The condition is always checked prior to the code execution, whereas you can put the condition wherever you want inside a `repeat` loop. However, you can still use the `break` inside a `while` loop.
 
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> myVector <- c()
+> x <- 2
+>
+> # length(vector) gets the number of values inside a vector.
+> while(length(myList) < 5) {
+>   myVector <- c(myVector, x)
+>   x <- x * 2
+> }
+>
+> cat(myList, "\n")
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> >
+> > 2 4 8 16 32
+>   </div>
+> </details>
+
 ### `for` Loops
 
 `for` loops are great to iterate over items in a collection. 
@@ -351,6 +379,35 @@ This is loop #9
 This is loop #10
 ```
 </div>
+
+{: .new-title }
+> Exercise                                             <!-- This is where you edit the title -->
+> 
+> What is the output of the code block below?
+>
+> ```r
+> x <- 0
+> for(number in 1:5) {
+>   # if the number is even (divisible by 2)
+>   if(number %% 2 == 0) {
+>     x <- x + 4
+>   } else {
+>     x <- x - 1
+>   }
+> }
+> 
+> cat(x, "\n")
+> ```
+>
+> <details>
+>   <summary> See Answer </summary>
+>   <div markdown="1">
+>   {: .note-title }                                   
+> > Answer
+> >
+> > 5
+>   </div>
+> </details>
 
 ## Key Points / Summary
 - You can use `if` statements to create conditional code.

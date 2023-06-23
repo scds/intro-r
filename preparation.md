@@ -67,5 +67,5 @@ An example is provided below.
 
 ## 2. Install RStudio
 
-- Navigate to <https://posit.co/download/rstudio-desktop/>/
+- Navigate to <https://posit.co/download/rstudio-desktop/>
 - Download and install RStudio for your operating system.
