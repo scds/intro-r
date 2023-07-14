@@ -1,6 +1,6 @@
-title: Introduction to R # *** Enter workshop title here 
+title: Introduction to R Programming # *** Enter workshop title here 
 github_repo_url: "https://scds.github.io/intro-r/" # *** Enter workshop URL (in github pages) here
-gh_edit_repository: "https://github.com/scds/intro-r" # *** Enter the github URL for your repo
+gh_edit_repository: "https://github.com/scds/intro-r/" # *** Enter the github URL for your repo
 ga_tracking: "G-ZSRWBKQMTD" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
 
 # DMDS Settings
