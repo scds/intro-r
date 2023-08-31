@@ -5,6 +5,9 @@ nav_order: 2
 parent: Lessons
 ---
 
+<!-- Script to resize H5P elements -->
+<script src="https://h5pstudio.ecampusontario.ca/modules/contrib/h5p/vendor/h5p/h5p-core/js/h5p-resizer.js" charset="UTF-8"></script>
+
 {: .no_toc}  
 # Lesson 2 - Variables
 
@@ -41,8 +44,8 @@ R has some rules and restrictions for identifiers.
 - Identifiers are case-sensitive.
   - `myVariable` and `MYVARIABLE` are considered two different variables.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise
 > 
 > Which of the following are valid variable names?
 >
@@ -64,7 +67,9 @@ R has some rules and restrictions for identifiers.
 > > - repeat is **not** a valid variable name because it's one of R's reserved keywords.
 > > - .1name is **not** a valid variable name because the period is followed by a digit.
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57525/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## Assigning Values to Variables
 
@@ -90,8 +95,8 @@ myVariable <- <new value>
 
 and that would set the value of `myVariable` to our new value.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise
 > 
 > What is the value of **a** after this code is executed?
 >
@@ -115,7 +120,9 @@ and that would set the value of `myVariable` to our new value.
 > > - **a** is assigned the value of **b**, which is 20.            (a = 20, b = 10)  
 > > - Finally, **b** is assigned the value of 3.                (a = 20, b = 3)
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57526/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## Using Variables in Math
 

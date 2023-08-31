@@ -5,6 +5,9 @@ nav_order: 6
 parent: Lessons
 ---
 
+<!-- Script to resize H5P elements -->
+<script src="https://h5pstudio.ecampusontario.ca/modules/contrib/h5p/vendor/h5p/h5p-core/js/h5p-resizer.js" charset="UTF-8"></script>
+
 {: .no_toc}  
 # Lesson 6 - Functions
 
@@ -219,8 +222,8 @@ The two roots of x^2 + 5x + 4 are -1 and -4
 ```
 </div>
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise   
 > 
 > Create a function with a `number` parameter. The function should return `TRUE` if a number is positive (or 0), and `FALSE` if a number is negative.
 >
@@ -240,7 +243,9 @@ The two roots of x^2 + 5x + 4 are -1 and -4
 > > }
 > > ```
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57565/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## Key Points / Summary
 

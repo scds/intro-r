@@ -5,6 +5,9 @@ nav_order: 5
 parent: Lessons
 ---
 
+<!-- Script to resize H5P elements -->
+<script src="https://h5pstudio.ecampusontario.ca/modules/contrib/h5p/vendor/h5p/h5p-core/js/h5p-resizer.js" charset="UTF-8"></script>
+
 {: .no_toc}  
 # Lesson 5 - Control Structures
 
@@ -44,8 +47,8 @@ if (logical) {
 
 Take a look at the code block above. This is the general structure of an `if` statement. If the `logical` is evaluation to be `TRUE`, the code inside the curly brackets { } will execute. Otherwise, if the `logical` is evaluated to be `FALSE`, R will skip over all the code inside the curly brackets  { }.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise      
 > 
 > What is the output of the code block below?
 >
@@ -68,7 +71,9 @@ Take a look at the code block above. This is the general structure of an `if` st
 > > 
 > > 7 is larger than 6
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57557/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### `else` Blocks
 
@@ -84,8 +89,8 @@ if (logical) {
 
 In the example above, the code inside the first pair of braces { } runs if the logical evaluates to be `TRUE`. Otherwise, if the logical evaluates to be `FALSE`, the code inside the second pair of braces { } will be executed.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise
 > 
 > What is the output of the code block below?
 >
@@ -108,7 +113,9 @@ In the example above, the code inside the first pair of braces { } runs if the l
 > >
 > > Keep in mind that 0.05 is **not** less than 0.05.
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57558/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### `else if` Blocks
 
@@ -126,8 +133,8 @@ if(logical1) {
 
 In the example above, code in `# code1` is executed if `logical` evalutes to be `TRUE`. If and only if `logical` evaluates to be `FALSE`, it will test `logical2`. If `logical2` is `TRUE`, the code in `# code2` is executed. Otherwise, the code inside `# code3` is executed.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise 
 > 
 > What is the output of the code block below?
 >
@@ -154,12 +161,14 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > > 
 > > You got a C!
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57559/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Extra Exercises
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise 
 > 
 > What is the output of the code block below?
 >
@@ -191,10 +200,12 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > > You got a C! 
 > > You got a D!
 >   </div>
-> </details>
+> </details> -->
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57561/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<!-- {: .new-title }
+> Exercise                              
 > 
 > What is the output of the code block below?
 >
@@ -223,7 +234,9 @@ In the example above, code in `# code1` is executed if `logical` evalutes to be 
 > >
 > > You got 1 head.
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57562/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## Loops
 
@@ -296,8 +309,8 @@ Output
 
 Rather than specifying when to stop the loop, you specify a condition that must be met for the loop to continue. The condition is always checked prior to the code execution, whereas you can put the condition wherever you want inside a `repeat` loop. However, you can still use the `break` inside a `while` loop.
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise 
 > 
 > What is the output of the code block below?
 >
@@ -322,7 +335,9 @@ Rather than specifying when to stop the loop, you specify a condition that must 
 > >
 > > 2 4 8 16 32
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57563/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
 
 ### `for` Loops
 
@@ -380,8 +395,8 @@ This is loop #10
 ```
 </div>
 
-{: .new-title }
-> Exercise                                             <!-- This is where you edit the title -->
+<!-- {: .new-title }
+> Exercise 
 > 
 > What is the output of the code block below?
 >
@@ -407,7 +422,10 @@ This is loop #10
 > >
 > > 5
 >   </div>
-> </details>
+> </details> -->
+
+<iframe src="https://h5pstudio.ecampusontario.ca/h5p/57564/embed" style="border: solid 2px #7a003c" width="100%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
+
 
 ## Key Points / Summary
 - You can use `if` statements to create conditional code.
