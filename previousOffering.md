@@ -15,6 +15,15 @@ parent: Home
 Workshop live recordings are listed here. They are provided as an **alternative** to the workshop content provided here. They are **not** required.
 
 <details markdown="1">
+<summary>October 2023</summary>
+<iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/d942f5ee-4dd9-4b68-bdb8-8c4ca44e1edc/public"></iframe>
+[View original here.](https://echo360.ca/media/d942f5ee-4dd9-4b68-bdb8-8c4ca44e1edc/public)
+
+Access the workshop files in the *Intro to R* folder here:
+- [Google Drive](https://www.bit.ly/2MVaTmv)
+</details>
+
+<details markdown="1">
 <summary>December 2022</summary>
 <iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/ac3c8750-dd6f-46df-9db7-0a158476f41a/public"></iframe>
 [View original here.](https://echo360.ca/media/ac3c8750-dd6f-46df-9db7-0a158476f41a/public)
