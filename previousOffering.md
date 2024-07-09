@@ -51,6 +51,6 @@ Access the workshop files here:
 
 <details markdown="1">
 <summary>November 2020</summary>
-<iframe height="416" width="100%" allowfullscreen frameborder=0 src="hhttps://echo360.ca/media/72bb7a46-c355-442b-8813-d59f853b4ff7/public"></iframe>
+<iframe height="416" width="100%" allowfullscreen frameborder=0 src="https://echo360.ca/media/72bb7a46-c355-442b-8813-d59f853b4ff7/public"></iframe>
 [View original here.](https://echo360.ca/media/72bb7a46-c355-442b-8813-d59f853b4ff7/public)
 </details>
